@@ -2,13 +2,33 @@
 //  main.cpp
 //  ExtractNames
 //
-//  Created by Sonia Lopchan on 10/24/24.
-//
+//  Created by Sonia Lopchan on 10/23/24.
 
 #include <iostream>
+#include <string>
+#include "ExtractNames.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    string fullName;
+    
+    cout << "Enter your fullname: ";
+    getline(cin, fullName);
+    
+    string firstName, lastName;
+
+    extractFirstLastName(fullName, firstName, lastName);
+
+    cout << "First Name: " << firstName << endl;
+    cout << "Last Name: " << lastName << endl;
+
     return 0;
 }
+/*
+ Output of the program
+ 
+ Enter your fullname: Sonia Lopchan Tamang
+ First Name: Sonia
+ Last Name: Lopchan Tamang
+ Program ended with exit code: 0
+ 
+ */
